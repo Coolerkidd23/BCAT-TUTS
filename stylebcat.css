@@ -1,0 +1,75 @@
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(Images/Blue\ and\ White\ Modern\ Book\ Store\ Logo_20240521_114204_0000.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+}
+
+body{    
+    background-image: linear-gradient(rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(Images/Blue\ and\ White\ Modern\ Book\ Store\ Logo_20240521_114204_0000.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+}
+
+.footer{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    display: inline-block;
+    padding-left: 20px;
+    text-align: center;
+    
+}
+a{
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+        color: #3f00fb;
+}
+
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 30px;
+    min-height: 40px;
+    margin-right: 60px;
+    font-size: 17px;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color:#fff;
+    padding: 15px;
+    border: 1px solid transparent;
+    transition: 0.5 ease;
+}
+
+ul li a:hover{
+    background-color: #fff;
+    color: #190062;
+}
+
+ul li.active a{
+    background-color: #190062;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
