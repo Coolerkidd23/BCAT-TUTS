@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tutor Dashboard</title>
+  <link rel="stylesheet" href="tutor-dashstyles.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>Tutor Dashboard</h1>
+    <button id="logoutBtn" class="logout">Logout</button>
+    <button id="darkToggle" class="dark-toggle" aria-label="Toggle Dark Mode">🌙</button>
+    <button id="menuToggle" class="hamburger" aria-label="Toggle Navigation">☰</button>
+  </div>
+</header>
+
+<main>
+  <nav class="sidebar" id="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="#">My Courses</a></li>
+      <li><a href="#">Upload Materials</a></li>
+      <li><a href="#">Messages</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Log Out</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <h2>Welcome, Tutor!</h2>
+
+    <!-- KPI Dashboard -->
+<section class="kpi-dashboard">
+  <div class="kpi-card">
+    <div class="kpi-title">Total Uploads</div>
+    <div class="kpi-value">124</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-title">Students Enrolled</div>
+    <div class="kpi-value">86</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-title">Modules</div>
+    <div class="kpi-value">12</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-title">Feedback</div>
+    <div class="kpi-value">37</div>
+  </div>
+</section>
+
+<!-- Icon Navigation Cards -->
+<section class="dashboard-icons">
+  <a class="card" href="#materials">
+    <div class="icon">📁</div>
+    <div class="label">My Materials</div>
+  </a>
+  <a class="card" href="#upload">
+    <div class="icon">📤</div>
+    <div class="label">Upload</div>
+  </a>
+  <a class="card" href="#modules">
+    <div class="icon">🗂️</div>
+    <div class="label">Modules</div>
+  </a>
+  <a class="card" href="#students">
+    <div class="icon">👥</div>
+    <div class="label">Students</div>
+  </a>
+</section>
+
+    <section class="upload-section">
+      <h3>Upload New Learning Material</h3>
+      <form id="uploadForm">
+        <label for="materialTitle">Title</label>
+        <input type="text" id="materialTitle" name="materialTitle" required>
+
+        <label for="fileUpload">Select File</label>
+        <input type="file" id="fileUpload" name="fileUpload" required>
+
+        <button type="submit">Upload</button>
+      </form>
+    </section>
+
+    <section class="materials-list">
+      <h3>Your Uploaded Materials</h3>
+      <ul id="materialsList">
+        <!-- Material entries will appear here -->
+      </ul>
+    </section>
+  </div>
+  <div id="toast" class="toast">Upload successful ✅</div>
+
+</main>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('sidebar');
+
+  menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+  });
+
+  const form = document.getElementById('uploadForm');
+  const materialsList = document.getElementById('materialsList');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const title = document.getElementById('materialTitle').value;
+    const fileInput = document.getElementById('fileUpload');
+    const fileName = fileInput.files[0]?.name;
+
+    if (title && fileName) {
+      const li = document.createElement('li');
+      li.textContent = `${title} - ${fileName}`;
+      materialsList.appendChild(li);
+      form.reset();
+    }
+  });
+</script>
+<script src="tutor-DashScript.js"></script>
+</body>
+</html>

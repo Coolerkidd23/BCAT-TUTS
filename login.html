@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - BCAT</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="logo-title">
+        <img src="Images/LOGO-W.png" alt="BCAT Logo" />
+        <h1>BCAT Tuts</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutbcat.html">About</a></li>
+          <li><a href="List of Modules.html">List of Modules</a></li>
+          <li><a href="Pictures.html">Pictures</a></li>
+          <li><a href="login.html">Log In</a></li>
+          <li><a href="#">Alumni</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main">
+      <section id="content">
+        <h1>Login Page</h1>
+        <p>Please enter your Login details Below</p>
+
+        <form onsubmit="return false;">
+          <label for="usernameInput">Username</label>
+          <input type="text" id="usernameInput" /><br />
+
+          <label for="passwordInput">Password</label>
+          <input type="password" id="passwordInput" />
+
+          <p id="message"></p>
+          <br /><br />
+
+          <button type="button" onclick="verifyUser()">Log In</button>
+        </form>
+
+        <script>
+          function verifyUser() {
+            var username = document.getElementById("usernameInput").value;
+            var password = document.getElementById("passwordInput").value;
+            checkUserCred(username, password);
+          }
+
+          function checkUserCred(username, password) {
+            var systemUsername = "mpmamabolobcat@gmail.com";
+            var systemPassword = "BCAT2026";
+
+            if (username === systemUsername && password === systemPassword) {
+              document.getElementById("message").innerHTML =
+                "Access Granted, Logging you in...";
+
+              // Redirect to dashboard after a short delay
+              setTimeout(function () {
+                window.location.href = "/tutor-dashboard/tutor-dashboard.html";
+              }, 2000);
+            } else {
+              document.getElementById("message").innerHTML =
+                "Username or Password are incorrect";
+            }
+          }
+        </script>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <ul>
+        <li>
+          <a href="https://whatsapp.com/channel/0029VaFQvAQI1rcljEZYqT2H"
+            >WHATSAPP</a
+          >
+        </li>
+        <li><a href="https://www.instagram.com/bcat_tuts.uj/">INSTAGRAM</a></li>
+        <li><a href="https://www.tiktok.com/bcat.tuts">TIK-TOK</a></li>
+        <li>
+          <a href="https://www.facebook.com/profile.php?id=61572305895018"
+            >FACEBOOK</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/bcom-modules-academy-and-tutorial-centre-2b6088331"
+            >LINKEDIN</a
+          >
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

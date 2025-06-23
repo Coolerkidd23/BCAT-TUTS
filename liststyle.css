@@ -1,0 +1,90 @@
+/* Main container */
+#main {
+  padding: 100px 20px 60px; /* space for fixed header and footer */
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Filters styling */
+#filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+#filters select {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  color: #190062;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+#filters select:focus {
+  outline: none;
+  border-color: #190062;
+}
+
+/* Module list container */
+#content-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Individual module entry */
+.info-box-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  color: inherit;
+}
+.info-box-list:hover {
+  transform: scale(1.02);
+}
+.info-box-list:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px rgba(25, 0, 98, 0.2);
+  outline: none;
+}
+
+/* Image and arrow layout */
+.info-box-list img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+.info-box-list .right {
+  width: 20px;
+  height: 20px;
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+
+/* Module title and description */
+.info-text h3 {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 1rem;
+  color: #333;
+}
+.info-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
