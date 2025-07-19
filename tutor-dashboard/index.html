@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tutor Upload Materials</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 2rem auto; }
+    form { margin-bottom: 2rem; }
+    label { display: block; margin-top: 1rem; }
+    input[type="text"], input[type="file"] { width: 100%; padding: 0.5rem; margin-top: 0.2rem; }
+    button { margin-top: 1rem; padding: 0.7rem 1.5rem; background: #0066cc; color: white; border: none; cursor: pointer; }
+    button:hover { background: #004999; }
+    ul { list-style: none; padding-left: 0; }
+    li { margin-bottom: 0.7rem; }
+  </style>
+</head>
+<body>
+
+  <h1>Tutor Upload Materials</h1>
+
+  <form id="uploadForm" method="POST" action="upload.php" enctype="multipart/form-data">
+    <label for="title">Material Title</label>
+    <input type="text" name="title" id="title" required />
+
+    <label for="file">Choose file</label>
+    <input type="file" name="file" id="file" required />
+
+    <button type="submit">Upload</button>
+  </form>
+
+  <h2>Available Materials</h2>
+  <ul>
+    <?php
+    // Show uploaded materials
+    $db = new SQLite3('materials.db');
+    $results = $db->query('SELECT id, title, filename FROM materials ORDER BY uploaded_at DESC');
+    while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
+      $title = htmlspecialchars($row['title']);
+      $file = htmlspecialchars($row['filename']);
+      echo "<li><a href='uploads/$file' download>$title</a></li>";
+    }
+    ?>
+  </ul>
+
+</body>
+</html>

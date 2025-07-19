@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCAT Student Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>BCAT Student Portal</h1>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-button active" data-tab="home">Home</button>
+    <button class="tab-button" data-tab="calendar">Calendar</button>
+    <button class="tab-button" data-tab="resources">Learning Resources</button>
+    <button class="tab-button" data-tab="forum">Forum / Chat</button>
+  </nav>
+
+  <main>
+    <section id="home" class="tab-content active">
+      <h2>Overview</h2>
+      <p>Welcome to the BCAT Student Portal. Access key resources, check your calendar, and connect with fellow students!</p>
+    </section>
+
+    <section id="calendar" class="tab-content">
+      <h2>Calendar</h2>
+      <p>Upcoming tutorials, exams, and events will be displayed here.</p>
+    </section>
+
+    <section id="resources" class="tab-content">
+      <h2>Learning Resources</h2>
+      <ul>
+        <li><a href="#">Notes & Summaries</a></li>
+        <li><a href="#">Recorded Sessions</a></li>
+        <li><a href="#">Practice Questions</a></li>
+        <li><a href="#">Recommended Readings</a></li>
+      </ul>
+    </section>
+
+    <section id="forum" class="tab-content">
+      <h2>Forum / Chat</h2>
+      <p>Engage with your tutors and fellow students. Share tips, ask questions, and collaborate!</p>
+      <div class="chat-box">
+        <div class="messages">
+          <!-- Chat messages will appear here -->
+        </div>
+        <input type="text" id="chatInput" placeholder="Type your message...">
+        <button id="sendButton">Send</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BCAT Tutorials</p>
+  </footer>
+
+  <script>
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        button.classList.add('active');
+        document.getElementById(button.getAttribute('data-tab')).classList.add('active');
+      });
+    });
+
+    // Simple chat functionality
+    const sendButton = document.getElementById('sendButton');
+    const chatInput = document.getElementById('chatInput');
+    const messages = document.querySelector('.messages');
+
+    sendButton.addEventListener('click', () => {
+      const msg = chatInput.value.trim();
+      if (msg) {
+        const msgElement = document.createElement('div');
+        msgElement.textContent = msg;
+        messages.appendChild(msgElement);
+        chatInput.value = '';
+      }
+    });
+  </script>
+
+</body>
+</html>
