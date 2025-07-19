@@ -54,6 +54,32 @@ body {
   color: white;
 }
 
+/* Hamburger */
+#hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  #header nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: ghostwhite;
+  }
+
+  #header nav ul.active {
+    display: flex;
+  }
+}
+
+
 /* FOOTER */
 #footer {
     position: fixed;

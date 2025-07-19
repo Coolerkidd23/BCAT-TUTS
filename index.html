@@ -15,6 +15,7 @@
         <h1>BCAT Tuts</h1>
       </div>
       <nav>
+        <div id="hamburger">&#9776;</div>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="aboutbcat.html">About</a></li>
@@ -200,5 +201,14 @@
 
       showSlides(slideIndex);
     </script>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.querySelector('#header nav ul');
+
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    </script>
+
   </body>
 </html>
