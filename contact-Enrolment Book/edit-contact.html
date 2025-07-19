@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Contact</title>
+    <link rel="stylesheet" href="#" />
+    
+  </head>
+  <body>
+    <div id="avatarImage"></div>
+    <form id="editForm">
+    <label for="firstname">First Name</label>
+    <input type="text" name="firstname" id="firstname" readonly /><br /><br />
+
+    <label for="lastname">Last Name</label>
+    <input type="text" name="lastname" id="lastname" readonly /><br /><br />
+
+    <label for="mobile">Mobile</label>
+    <input type="text" name="mobile" id="mobile" readonly /><br /><br />
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" readonly /><br /><br />
+
+    <label for="avatar" id="avatarLabel" hidden>Change Profile image</label><br />
+    <input type="file" name="avatar" id="avatar" hidden /><br /><br />
+
+    <button type="submit" id="submitForm" hidden>Submit</button>
+    </form>
+    <br /><br />
+    <button id="homeLink" type="button">Home</button>
+    <button id="editContact" type="button">Edit</button>
+    <button id="deleteContact" type="button">Delete</button>
+
+    <script src="config.js"></script>
+    <script>
+      var id= getId();
+      console.log("The id is :" + id);
+
+      function getId(){
+        var url= window.location.href;
+        var pos= url.search("=");
+        var id= url.slice(pos+1);
+        return id;
+      }
+
+    </script>
+  </body>
+</html>
