@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - BCAT</title>
     <link rel="stylesheet" href="style.css" />
-    
   </head>
+
   <body>
     <!-- Header -->
     <header id="header">
@@ -14,9 +14,10 @@
         <img src="Images/LOGO-W.png" alt="BCAT Logo" />
         <h1>BCAT Tuts</h1>
       </div>
-      <nav>
-        <div id="hamburger">&#9776;</div>
-        <ul>
+
+      <nav aria-label="Main navigation">
+        <div id="hamburger" aria-label="Toggle menu">&#9776;</div>
+        <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="aboutbcat.html">About</a></li>
           <li><a href="List of Modules.html">List of Modules</a></li>
@@ -29,131 +30,116 @@
 
     <!-- Main Content -->
     <main id="main">
-      <section id="content">
+      <section id="intro">
         <h1>Home Page</h1>
         <p>Welcome to the home of Top Notch study productivity and support</p>
+      </section>
 
-        <!-- Slideshow Banner -->
-        <div class="slideshow-container">
-          <!-- Slides -->
-          <div class="slide fade">
-            <img src="Images/banner1.jpg" alt="Slide 1" />
-          </div>
-          <div class="slide fade">
-            <img src="Images/banner2.jpg" alt="Slide 2" />
-          </div>
-          <div class="slide fade">
-            <img src="Images/banner3.jpg" alt="Slide 3" />
-          </div>
-          <!-- Arrows -->
-          <a class="prev">&#10094;</a>
-          <a class="next">&#10095;</a>
-        </div>
-        <!-- Dots -->
+      <!-- Slideshow Banner -->
+      <section class="slideshow-container" aria-label="Featured slides">
+        <div class="slide fade"><img src="Images/banner1.jpg" alt="Study tips banner 1" /></div>
+        <div class="slide fade"><img src="Images/banner2.jpg" alt="BCAT sessions banner 2" /></div>
+        <div class="slide fade"><img src="Images/banner3.jpg" alt="Student collaboration banner 3" /></div>
+
+        <button class="prev" aria-label="Previous slide">&#10094;</button>
+        <button class="next" aria-label="Next slide">&#10095;</button>
+
         <div class="dots-container">
           <span class="dot" data-slide="1"></span>
           <span class="dot" data-slide="2"></span>
           <span class="dot" data-slide="3"></span>
         </div>
+      </section>
 
-      <h2>Why Join Us?</h2>
-      <p>At BCom Modules Academy and Tutorial Centre we are not just a tutoring organization 
-        but we are family, Free Mentorship offered, Prayer Sessions are hosted, and most 
-        importantly we share our own achievements to motivate our fellow mates. </p>
-        <!--  Featured Modules -->
+      <!-- Why Join -->
+      <section id="why-join">
+        <h2>Why Join Us?</h2>
+        <p>
+          At BCom Modules Academy and Tutorial Centre we are not just a tutoring organization
+          but a family. Free mentorship, prayer sessions, and motivational sharing of achievements are core to our support.
+        </p>
+      </section>
+
+      <!-- Featured Modules -->
+      <section id="featured-modules">
         <h2>Featured Modules</h2>
         <div id="content-list">
-        <a class="info-box-list" href="#" data-year="2nd" data-type="taxation">
-          <img src="icons/taxpl.png" alt="Taxation" />
-          <div class="info-text">
-            <h3>TAXATION PLANNING 2A & 2B</h3>
-            <p>Taxation for BCom finance</p>
-          </div>
-          <img class="right" src="icons/arrow-right.png" alt="Arrow" />
-        </a>
-      
-        <a class="info-box-list" href="acc1A.html" data-year="1st" data-type="accounting">
-          <img src="icons/accounting.png" alt="Accounting" />
-          <div class="info-text">
-            <h3>ACCOUNTING 1A & 1B</h3>
-            <p>Accounting for all BCom 1st year Mainstream and 2nd year Extended</p>
-          </div>
-          <img class="right" src="icons/arrow-right.png" alt="Arrow" />
-        </a>
-        <a class="info-box-list" href="Eco.html" data-year="1st" data-type="economics">
-          <img src="icons/econo.png" alt="Economics" />
-          <div class="info-text">
-            <h3>ECONOMICS 1A & 1B</h3>
-            <p>Economics for all BCom 1st year Mainstream and 2nd year Extended</p>
-          </div>
-          <img class="right" src="icons/arrow-right.png" alt="Arrow" />
-        </a>
-        
-      </div>
-
-        <!-- Testimonials -->
-        <section id="testimonials">
-          <h2>What our Family Says about us</h2>
-          <div class="testimonial-grid">
-            <div class="testimonial">
-              <div class="testimonial-header">
-                <img src="Images/students/jane.jpg" alt="Jane" />
-                <div class="testimonial-info">
-                  <span class="name">Jane Dlamini</span>
-                  <span class="handle">@jane_ujbcom</span>
-                </div>
-              </div>
-              <p>
-                BCAT helped me pass Taxation 2B with confidence. Their tutors
-                explain things better than my lectures sometimes!
-              </p>
+          <a class="info-box-list" href="#" data-year="2nd" data-type="taxation">
+            <img src="icons/taxpl.png" alt="Taxation" />
+            <div class="info-text">
+              <h3>Taxation Planning 2A & 2B</h3>
+              <p>Taxation for BCom finance</p>
             </div>
+            <img class="right" src="icons/arrow-right.png" alt="Arrow" />
+          </a>
 
-            <div class="testimonial">
-              <div class="testimonial-header">
-                <img src="Images/students/mike.jpg" alt="Mike" />
-                <div class="testimonial-info">
-                  <span class="name">Mike Nkosi</span>
-                  <span class="handle">@mike_com</span>
-                </div>
-              </div>
-              <p>
-                The past paper walkthroughs saved me during exam week. Highly
-                recommend BCAT for any BCom student.
-              </p>
+          <a class="info-box-list" href="acc1A.html" data-year="1st" data-type="accounting">
+            <img src="icons/accounting.png" alt="Accounting" />
+            <div class="info-text">
+              <h3>Accounting 1A & 1B</h3>
+              <p>For all BCom 1st year Mainstream and 2nd year Extended</p>
             </div>
+            <img class="right" src="icons/arrow-right.png" alt="Arrow" />
+          </a>
 
-            <!-- Add more testimonials here -->
-          </div>
-        </section>
+          <a class="info-box-list" href="Eco.html" data-year="1st" data-type="economics">
+            <img src="icons/econo.png" alt="Economics" />
+            <div class="info-text">
+              <h3>Economics 1A & 1B</h3>
+              <p>For all BCom 1st year Mainstream and 2nd year Extended</p>
+            </div>
+            <img class="right" src="icons/arrow-right.png" alt="Arrow" />
+          </a>
+        </div>
+      </section>
 
-        <h4>Social media profile links</h4>
+      <!-- Testimonials -->
+      <section id="testimonials">
+        <h2>What Our Family Says About Us</h2>
+        <div class="testimonial-grid">
+          <blockquote class="testimonial">
+            <div class="testimonial-header">
+              <img src="Images/students/jane.jpg" alt="Jane Dlamini" />
+              <div class="testimonial-info">
+                <span class="name">Jane Dlamini</span>
+                <span class="handle">@jane_ujbcom</span>
+              </div>
+            </div>
+            <p>BCAT helped me pass Taxation 2B with confidence. Their tutors explain things better than my lectures sometimes!</p>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <div class="testimonial-header">
+              <img src="Images/students/mike.jpg" alt="Mike Nkosi" />
+              <div class="testimonial-info">
+                <span class="name">Mike Nkosi</span>
+                <span class="handle">@mike_com</span>
+              </div>
+            </div>
+            <p>The past paper walkthroughs saved me during exam week. Highly recommend BCAT for any BCom student.</p>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Social Media -->
+      <section id="social-media">
+        <h4>Connect With Us</h4>
+        <ul>
+          <li><a href="https://whatsapp.com/channel/0029VaFQvAQI1rcljEZYqT2H">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/bcat_tuts.uj/">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/bcat.tuts">TikTok</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61572305895018">Facebook</a></li>
+          <li><a href="https://www.linkedin.com/in/bcom-modules-academy-and-tutorial-centre-2b6088331">LinkedIn</a></li>
+        </ul>
       </section>
     </main>
 
     <!-- Footer -->
     <footer id="footer">
-      <ul>
-        <li>
-          <a href="https://whatsapp.com/channel/0029VaFQvAQI1rcljEZYqT2H"
-            >WHATSAPP</a
-          >
-        </li>
-        <li><a href="https://www.instagram.com/bcat_tuts.uj/">INSTAGRAM</a></li>
-        <li><a href="https://www.tiktok.com/bcat.tuts">TIK-TOK</a></li>
-        <li>
-          <a href="https://www.facebook.com/profile.php?id=61572305895018"
-            >FACEBOOK</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/bcom-modules-academy-and-tutorial-centre-2b6088331"
-            >LINKEDIN</a
-          >
-        </li>
-      </ul>
+      <p>&copy; 2025 BCAT Tuts. All rights reserved.</p>
     </footer>
+
+    <!-- Scripts -->
     <script>
       let slideIndex = 1;
       let timer;
@@ -165,50 +151,38 @@
         if (n > slides.length) slideIndex = 1;
         if (n < 1) slideIndex = slides.length;
 
-        for (let i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-
-        for (let i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
+        Array.from(slides).forEach(slide => slide.style.display = "none");
+        Array.from(dots).forEach(dot => dot.classList.remove("active"));
 
         slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
+        dots[slideIndex - 1].classList.add("active");
 
         clearTimeout(timer);
-        timer = setTimeout(() => plusSlides(1), 4000); // Auto
+        timer = setTimeout(() => plusSlides(1), 4000);
       }
 
       function plusSlides(n) {
-        showSlides((slideIndex += n));
+        showSlides(slideIndex += n);
       }
 
       function currentSlide(n) {
-        showSlides((slideIndex = n));
+        showSlides(slideIndex = n);
       }
 
-      document
-        .querySelector(".prev")
-        .addEventListener("click", () => plusSlides(-1));
-      document
-        .querySelector(".next")
-        .addEventListener("click", () => plusSlides(1));
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector(".prev").addEventListener("click", () => plusSlides(-1));
+        document.querySelector(".next").addEventListener("click", () => plusSlides(1));
+        document.querySelectorAll(".dot").forEach((dot, i) => {
+          dot.addEventListener("click", () => currentSlide(i + 1));
+        });
 
-      document.querySelectorAll(".dot").forEach((dot, i) => {
-        dot.addEventListener("click", () => currentSlide(i + 1));
+        showSlides(slideIndex);
       });
 
-      showSlides(slideIndex);
-    </script>
-    <script>
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.querySelector('#header ul');
-
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+      // Hamburger menu toggle
+      document.getElementById('hamburger').addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.toggle('active');
       });
     </script>
-
   </body>
 </html>
