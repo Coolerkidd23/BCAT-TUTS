@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop All Products | BCAT Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/products.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <h1 class="logo">BCAT Store</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="active">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">All Products</h2>
+
+    <div class="product-grid">
+      <!-- Hoodie -->
+      <div class="product-card">
+        <img src="images/hoodie.jpg" alt="BCAT Hoodie" />
+        <h4>BCAT Hoodie</h4>
+        <p>R350</p>
+        <button class="btn" onclick='addToCart({
+          name: "BCAT Hoodie",
+          price: 350,
+          image: "images/hoodie.jpg"
+        })'>Add to Cart</button>
+      </div>
+
+      <!-- Golfer -->
+      <div class="product-card">
+        <img src="images/golfer.jpg" alt="BCAT Golfer" />
+        <h4>BCAT Golfer</h4>
+        <p>R250</p>
+        <button class="btn" onclick='addToCart({
+          name: "BCAT Golfer",
+          price: 250,
+          image: "images/golfer.jpg"
+        })'>Add to Cart</button>
+      </div>
+
+      <!-- Round Neck -->
+      <div class="product-card">
+        <img src="images/round-neck.jpg" alt="Round Neck Shirt" />
+        <h4>Round Neck Shirt</h4>
+        <p>R180</p>
+        <button class="btn" onclick='addToCart({
+          name: "Round Neck Shirt",
+          price: 180,
+          image: "images/round-neck.jpg"
+        })'>Add to Cart</button>
+      </div>
+
+      <!-- V-Neck -->
+      <div class="product-card">
+        <img src="images/v-neck.jpg" alt="V-Neck Shirt" />
+        <h4>V-Neck Shirt</h4>
+        <p>R200</p>
+        <button class="btn" onclick='addToCart({
+          name: "V-Neck Shirt",
+          price: 200,
+          image: "images/v-neck.jpg"
+        })'>Add to Cart</button>
+      </div>
+
+      <!-- Beanie -->
+      <div class="product-card">
+        <img src="images/beanie.jpg" alt="BCAT Beanie" />
+        <h4>BCAT Beanie</h4>
+        <p>R100</p>
+        <button class="btn" onclick='addToCart({
+          name: "BCAT Beanie",
+          price: 100,
+          image: "images/beanie.jpg"
+        })'>Add to Cart</button>
+      </div>
+
+      <!-- Mug -->
+      <div class="product-card">
+        <img src="images/mug.jpg" alt="Coffee Mug" />
+        <h4>Coffee Mug</h4>
+        <p>R100</p>
+        <button class="btn" onclick='addToCart({
+          name: "Coffee Mug",
+          price: 100,
+          image: "images/mug.jpg"
+        })'>Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BCAT Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function addToCart(product) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      const existing = cart.find(item => item.name === product.name);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        product.quantity = 1;
+        cart.push(product);
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${product.name} added to cart!`);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout | BCAT Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/checkout.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <h1 class="logo">BCAT Store</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Checkout</h2>
+
+    <form id="checkout-form" class="checkout-form">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+
+      <div class="form-group">
+        <label for="address">Delivery Address</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Additional Notes (Optional)</label>
+        <textarea id="notes" name="notes" rows="2"></textarea>
+      </div>
+
+      <button type="submit" class="btn">Place Order</button>
+    </form>
+
+    <div id="order-summary" style="display: none; margin-top: 2rem;"></div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BCAT Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("checkout-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+      }
+
+      const fullname = document.getElementById("fullname").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const address = document.getElementById("address").value;
+      const notes = document.getElementById("notes").value;
+
+      const order = {
+        customer: { fullname, email, phone, address, notes },
+        items: cart,
+        total: cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
+      };
+
+      // Optionally send this to server via fetch() in future
+
+      // Display confirmation
+      const summary = document.getElementById("order-summary");
+      summary.innerHTML = `
+        <h3>Order Confirmation</h3>
+        <p>Thank you, <strong>${fullname}</strong>! Your order has been received.</p>
+        <p><strong>Total:</strong> R${order.total.toFixed(2)}</p>
+        <p>We'll contact you via <strong>${email}</strong> or <strong>${phone}</strong>.</p>
+      `;
+      summary.style.display = "block";
+
+      // Clear cart and form
+      localStorage.removeItem("cart");
+      document.getElementById("checkout-form").reset();
+    });
+  </script>
+</body>
+</html>

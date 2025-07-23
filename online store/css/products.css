@@ -1,0 +1,71 @@
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Product Grid Layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+/* Product Card Styling */
+.product-card {
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Images */
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+
+/* Product Name and Price */
+.product-card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.product-card p {
+  font-weight: bold;
+  color: #003366; /* Deep Blue */
+  margin-bottom: 0.7rem;
+}
+
+/* Add to Cart Button */
+.product-card .btn {
+  background: #003366;  /* Deep Blue */
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.product-card .btn:hover {
+  background: black;
+  color: white;
+}
