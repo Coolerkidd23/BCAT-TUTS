@@ -1,190 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>List of Modules - BCAT</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="liststyle.css" />
-  </head>
-  <body>
-    <!-- Header -->
-    <header id="header">
-      <img src="Images/LOGO-W.png" alt="BCAT Logo" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>List of Modules - BCAT</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="liststyle.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+      <div class="logo-title">
+        <img src="Images/LOGO-W.png" alt="BCAT Logo" />
+        <h1>BCAT Tuts</h1>
+      </div>
       <nav>
+        <div id="hamburger">&#9776;</div>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="aboutbcat.html">About</a></li>
-          <li>
-            <a href="listofmodules.html" class="active">List of Modules</a>
-          </li>
-          <li><a href="pictures.html">Pictures</a></li>
+          <li><a href="List of Modules.html">List of Modules</a></li>
+          <li><a href="student-dashboard/index.html">Pictures</a></li>
           <li><a href="login.html">Log In</a></li>
-          <li><a href="#">Alumni</a></li>
+          <li><a href="tutor-dashboard/tutor-dashboard.html">Alumni</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- Main Content -->
-    <main id="main">
-      <!-- Filters -->
-      <div id="filters">
-        <select id="yearFilter">
-          <option value="all">All Years</option>
-          <option value="1st">1st Year</option>
-          <option value="2nd">2nd Year</option>
-        </select>
-        <select id="typeFilter">
-          <option value="all">All Modules</option>
-          <option value="accounting">Accounting</option>
-          <option value="taxation">Taxation</option>
-          <option value="finance">Financial Management</option>
-        </select>
-      </div>
+  <!-- Main -->
+  <main id="main">
+    <section id="filters">
+      <select id="yearFilter">
+        <option value="all">All Years</option>
+        <option value="1st">1st Year</option>
+        <option value="2nd">2nd Year</option>
+      </select>
+      <select id="typeFilter">
+        <option value="all">All Modules</option>
+        <option value="accounting">Accounting</option>
+        <option value="taxation">Taxation</option>
+        <option value="finance">Financial Management</option>
+      </select>
+    </section>
 
-      <!-- Module List -->
-      <div id="content-list">
-        <a class="info-box-list" href="acc1A.html" data-year="1st" data-type="accounting">
-          <img src="icons/accounting.png" alt="Accounting" />
-          <div class="info-text">
-            <h3>ACCOUNTING 1A & 1B</h3>
-            <p>Accounting for all BCom 1st year Mainstream and 2nd year Extended</p>
-          </div>
-          <img class="right" src="icons/arrow-right.png" alt="Arrow" />
-        </a>
+    <section id="content-list">
+      <!-- List of modules (unchanged) -->
+       <a class="info-box-list" href="acc1A.html" data-year="1st" data-type="accounting">
+        <img src="icons/accounting.png" alt="Accounting">
+        <div class="info-text">
+          <h3>ACCOUNTING 1A & 1B</h3>
+          <p>Accounting for all BCom 1st year Mainstream and 2nd year Extended</p>
+        </div>
+        <img class="right" src="icons/arrow-right.png" alt="Arrow"/>
+      </a>
 
-        <a class="info-box-list" href="acc100.html" data-year="1st" data-type="accounting">
-          <img src="icons/accounting.png" alt="Accounting" />
-          <div class="info-text">
-            <h3>ACCOUNTING 100</h3>
-            <p>Accounting for all Bachelor of Accounting 1st year</p>
-          </div>
-          <img class="right" src="icons/arrow-right.png" alt="Arrow" />
-        </a>
+      <a class="info-box-list" href="acc100.html" data-year="1st" data-type="accounting">
+        <img src="icons/accounting.png" alt="Accounting" />
+        <div class="info-text">
+          <h3>ACCOUNTING 100</h3>
+          <p>Accounting for all Bachelor of Accounting 1st year</p>
+        </div>
+        <img class="right" src="icons/arrow-right.png" alt="Arrow" />
+      </a>
 
-        <a class="info-box-list" href="acc2.html" data-year="2nd" data-type="accounting">
-          <img src="icons/accounting2.png" alt="Accounting" />
-          <div class="info-text">
-            <h3>ACCOUNTING 2A & 2B</h3>
-            <p>Accounting for all BCom 2nd year</p>
-          </div>
-          <img class="right" src="icons/arrow-right.png" alt="Arrow" />
-        </a>
+      <a class="info-box-list" href="acc2.html" data-year="2nd" data-type="accounting">
+        <img src="icons/accounting2.png" alt="Accounting" />
+        <div class="info-text">
+          <h3>ACCOUNTING 2A & 2B</h3>
+          <p>Accounting for all BCom 2nd year</p>
+        </div>
+        <img class="right" src="icons/arrow-right.png" alt="Arrow" />
+      </a>
 
-        <a class="info-box-list" href="acc200.html" data-year="2nd" data-type="accounting">
-          <img src="icons/accounting2.png" alt="Accounting" />
-          <div class="info-text">
-            <h3>ACCOUNTING 200</h3>
-            <p>Accounting for all Bachelor of Accounting 2nd year</p>
-          </div>
-          <img class="right" src="icons/arrow-right.png" alt="Arrow" />
-        </a>
+      <a class="info-box-list" href="acc200.html" data-year="2nd" data-type="accounting">
+        <img src="icons/accounting2.png" alt="Accounting" />
+        <div class="info-text">
+          <h3>ACCOUNTING 200</h3>
+          <p>Accounting for all Bachelor of Accounting 2nd year</p>
+        </div>
+        <img class="right" src="icons/arrow-right.png" alt="Arrow" />
+      </a>
 
-        <a class="info-box-list" href="#" data-year="2nd" data-type="finance">
-          <img src="icons/cost.png" alt="Cost" />
-          <div class="info-text">
-            <h3>COST AND MANAGEMENT ACCOUNTING 2B</h3>
-            <p>Cost Accounting for BCom 2nd year</p>
-          </div>
-          <img class="right" src="icons/arrow-right.png" alt="Arrow" />
-        </a>
+      <a class="info-box-list" href="#" data-year="2nd" data-type="finance">
+        <img src="icons/cost.png" alt="Cost" />
+        <div class="info-text">
+          <h3>COST AND MANAGEMENT ACCOUNTING 2B</h3>
+          <p>Cost Accounting for BCom 2nd year</p>
+        </div>
+        <img class="right" src="icons/arrow-right.png" alt="Arrow" />
+      </a>
 
-        <a class="info-box-list" href="#" data-year="1st" data-type="finance">
-          <img src="icons/finance-1.png" alt="Finance" />
-          <div class="info-text">
-            <h3>FINANCIAL MANAGEMENT 1B</h3>
-            <p>Financial Management for BCom 1st year</p>
-          </div>
-          <img class="right" src="icons/arrow-right.png" alt="Arrow" />
-        </a>
-        
-        <a class="info-box-list" href="#" data-year="2nd" data-type="finance">
-          <img src="icons/finance-2.png" alt="Finance" />
-          <div class="info-text">
-            <h3>FINANCIAL MANAGEMENT 2A</h3>
-            <p>Financial Management for all BCom Accounting 2nd year</p>
-          </div>
-          <img class="right" src="icons/arrow-right.png" alt="Arrow" />
-        </a>
-        
-        <a class="info-box-list" href="#" data-year="2nd" data-type="taxation">
-          <img src="icons/taxp.png" alt="Taxation" />
-          <div class="info-text">
-            <h3>TAXATION 2AB</h3>
-            <p>Taxation for all BCom Accounting 2nd year</p>
-          </div>
-          <img class="right" src="icons/arrow-right.png" alt="Arrow" />
-        </a>
+      <a class="info-box-list" href="#" data-year="1st" data-type="finance">
+        <img src="icons/finance-1.png" alt="Finance" />
+        <div class="info-text">
+          <h3>FINANCIAL MANAGEMENT 1B</h3>
+          <p>Financial Management for BCom 1st year</p>
+        </div>
+        <img class="right" src="icons/arrow-right.png" alt="Arrow" />
+      </a>
+      
+      <a class="info-box-list" href="#" data-year="2nd" data-type="finance">
+        <img src="icons/finance-2.png" alt="Finance" />
+        <div class="info-text">
+          <h3>FINANCIAL MANAGEMENT 2A</h3>
+          <p>Financial Management for all BCom Accounting 2nd year</p>
+        </div>
+        <img class="right" src="icons/arrow-right.png" alt="Arrow" />
+      </a>
+      
+      <a class="info-box-list" href="#" data-year="2nd" data-type="taxation">
+        <img src="icons/taxp.png" alt="Taxation" />
+        <div class="info-text">
+          <h3>TAXATION 2AB</h3>
+          <p>Taxation for all BCom Accounting 2nd year</p>
+        </div>
+        <img class="right" src="icons/arrow-right.png" alt="Arrow" />
+      </a>
 
-        <a class="info-box-list" href="#" data-year="2nd" data-type="taxation">
-          <img src="icons/taxp.png" alt="Taxation" />
-          <div class="info-text">
-            <h3>TAXATION 200</h3>
-            <p>Taxation for all Bachelor of Accounting 2nd year</p>
-          </div>
-          <img class="right" src="icons/arrow-right.png" alt="Arrow" />
-        </a>
+      <a class="info-box-list" href="#" data-year="2nd" data-type="taxation">
+        <img src="icons/taxp.png" alt="Taxation" />
+        <div class="info-text">
+          <h3>TAXATION 200</h3>
+          <p>Taxation for all Bachelor of Accounting 2nd year</p>
+        </div>
+        <img class="right" src="icons/arrow-right.png" alt="Arrow" />
+      </a>
 
-        <a class="info-box-list" href="#" data-year="2nd" data-type="taxation">
-          <img src="icons/taxpl.png" alt="Taxation" />
-          <div class="info-text">
-            <h3>TAXATION PLANNING 2A & 2B</h3>
-            <p>Taxation for BCom finance</p>
-          </div>
-          <img class="right" src="icons/arrow-right.png" alt="Arrow" />
-        </a>
+      <a class="info-box-list" href="#" data-year="2nd" data-type="taxation">
+        <img src="icons/taxpl.png" alt="Taxation" />
+        <div class="info-text">
+          <h3>TAXATION PLANNING 2A & 2B</h3>
+          <p>Taxation for BCom finance</p>
+        </div>
+        <img class="right" src="icons/arrow-right.png" alt="Arrow" />
+      </a>
+    </section>
+  </main>
 
-        
-      </div>
-    </main>
+  <!-- Footer -->
+  <footer id="footer">
+    <ul>
+      <li><a href="https://whatsapp.com/channel/0029VaFQvAQI1rcljEZYqT2H">WHATSAPP</a></li>
+      <li><a href="https://www.instagram.com/bcat_tuts.uj/">INSTAGRAM</a></li>
+      <li><a href="https://www.tiktok.com/bcat.tuts">TIK-TOK</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61572305895018">FACEBOOK</a></li>
+      <li><a href="https://www.linkedin.com/in/bcom-modules-academy-and-tutorial-centre-2b6088331">LINKEDIN</a></li>
+    </ul>
+  </footer>
 
-    <!-- Footer -->
-    <footer id="footer">
-      <ul>
-        <li>
-          <a href="https://whatsapp.com/channel/0029VaFQvAQI1rcljEZYqT2H"
-            >WHATSAPP</a
-          >
-        </li>
-        <li><a href="https://www.instagram.com/bcat_tuts.uj/">INSTAGRAM</a></li>
-        <li><a href="https://www.tiktok.com/bcat.tuts">TIK-TOK</a></li>
-        <li>
-          <a href="https://www.facebook.com/profile.php?id=61572305895018"
-            >FACEBOOK</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/bcom-modules-academy-and-tutorial-centre-2b6088331"
-            >LINKEDIN</a
-          >
-        </li>
-      </ul>
-    </footer>
+  <!-- Scripts -->
+  <script>
+    // Toggle hamburger menu
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.querySelector("#header nav ul");
 
-    <!-- JavaScript for filtering -->
-    <script>
-      const yearFilter = document.getElementById("yearFilter");
-      const typeFilter = document.getElementById("typeFilter");
-      const modules = document.querySelectorAll(".info-box-list");
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+   });
 
-      function filterModules() {
-        const selectedYear = yearFilter.value;
-        const selectedType = typeFilter.value;
+    // Filter logic
+    const yearFilter = document.getElementById("yearFilter");
+    const typeFilter = document.getElementById("typeFilter");
+    const modules = document.querySelectorAll(".info-box-list");
 
-        modules.forEach((module) => {
-          const year = module.getAttribute("data-year");
-          const type = module.getAttribute("data-type");
+    function filterModules() {
+      const selectedYear = yearFilter.value;
+      const selectedType = typeFilter.value;
 
-          const yearMatch = selectedYear === "all" || selectedYear === year;
-          const typeMatch = selectedType === "all" || selectedType === type;
+      modules.forEach(module => {
+        const year = module.getAttribute("data-year");
+        const type = module.getAttribute("data-type");
 
-          module.style.display = yearMatch && typeMatch ? "flex" : "none";
-        });
-      }
+        const yearMatch = selectedYear === "all" || selectedYear === year;
+        const typeMatch = selectedType === "all" || selectedType === type;
 
-      yearFilter.addEventListener("change", filterModules);
-      typeFilter.addEventListener("change", filterModules);
-    </script>
-  </body>
+        module.style.display = yearMatch && typeMatch ? "flex" : "none";
+      });
+    }
+
+    yearFilter.addEventListener("change", filterModules);
+    typeFilter.addEventListener("change", filterModules);
+  </script>
+  <script src="script.js"></script>
+</body>
 </html>

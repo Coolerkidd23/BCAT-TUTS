@@ -1,68 +1,69 @@
+/* LISTSTYLE.CSS — Page-Specific Styling for listofmodules.html */
+
 /* Main container */
 #main {
-  padding: 100px 20px 60px; /* space for fixed header and footer */
-  max-width: 900px;
+  padding: 100px 20px 60px; /* leave space for fixed header/footer */
+  max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-/* Filters styling */
+/* Filters */
 #filters {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   flex-wrap: wrap;
 }
 
 #filters select {
   padding: 10px 15px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #A67C00; /* gold */
   border-radius: 10px;
   color: #190062;
-  background-color: #f9f9f9;
+  background-color: #fff;
   cursor: pointer;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #filters select:focus {
   outline: none;
-  border-color: #190062;
+  border-color: #A67C00;
+  background-color: #fdf6e3; /* cream highlight */
 }
 
-/* Module list container */
+/* Module grid */
 #content-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
+  gap: 1.2rem;
+  padding: 0 1rem;
 }
 
-/* Individual module entry */
+/* Individual module */
 .info-box-list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 10px;
-  text-decoration: none;
+  border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
-  color: inherit;
+  text-decoration: none;
+  color: #000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.info-box-list:hover {
-  transform: scale(1.02);
-}
+.info-box-list:hover,
 .info-box-list:focus {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 15px rgba(25, 0, 98, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(166, 124, 0, 0.4); /* subtle gold */
   outline: none;
 }
 
-/* Image and arrow layout */
+/* Icon and right arrow */
 .info-box-list img {
   width: 50px;
   height: 50px;
@@ -70,21 +71,41 @@
   margin-bottom: 0.5rem;
 }
 .info-box-list .right {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   margin-top: auto;
   align-self: flex-end;
 }
 
-
-/* Module title and description */
+/* Text content */
 .info-text h3 {
   margin: 0.5rem 0 0.2rem;
-  font-size: 1rem;
-  color: #333;
+  font-size: 1.1rem;
+  color: #190062;
 }
 .info-text p {
   margin: 0;
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.95rem;
+  color: #5c5c5c;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  #filters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #filters select {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .info-text h3 {
+    font-size: 1rem;
+  }
+
+  .info-text p {
+    font-size: 0.85rem;
+  }
 }
