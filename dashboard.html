@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tutor Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>Welcome, Tutor!</h1>
+    <nav>
+      <ul>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#classes">Scheduled Classes</a></li>
+        <li><a href="#students">Students</a></li>
+        <li><a href="#upload">Upload Materials</a></li>
+        <li><a href="#messages">Messages</a></li>
+        <li><a href="logout.php">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dashboard-container">
+    <section id="profile">
+      <h2>My Profile</h2>
+      <!-- Profile details here -->
+    </section>
+
+    <section id="classes">
+      <h2>Scheduled Classes</h2>
+      <!-- Table of classes -->
+    </section>
+
+    <section id="students">
+      <h2>My Students</h2>
+      <!-- Student list -->
+    </section>
+
+    <section id="upload">
+      <h2>Upload Materials</h2>
+      <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <input type="file" name="material" required>
+        <button type="submit">Upload</button>
+      </form>
+    </section>
+
+    <section id="messages">
+      <h2>Messages</h2>
+      <!-- Notifications/messages -->
+    </section>
+  </main>
+</body>
+</html>
